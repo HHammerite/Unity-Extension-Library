@@ -10,7 +10,7 @@ namespace UnityExtensions
         /// <param name="layerMask"></param>
         /// <param name="layer"></param>
         /// <returns></returns>
-        public static bool IsInLayer(this LayerMask layerMask, int layer)
+        public static bool Contains(this LayerMask layerMask, int layer)
         {
             return layerMask == (layerMask | (1 << layer));
         }

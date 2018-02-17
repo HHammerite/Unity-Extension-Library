@@ -40,9 +40,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GameObjectExtensions.cs" />
     <Compile Include="LayerMaskExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TransformExtensions.cs" />
+    <Compile Include="Vector2Extensions.cs" />
+    <Compile Include="Vector3Extensions.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
