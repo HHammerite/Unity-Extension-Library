@@ -1,15 +1,17 @@
 ﻿using UnityEngine;
-using System.Collections;
- 
-public static class PlayerPrefExtensions
+
+namespace UnityExtensions
 {
-    public static bool GetBool (this PlayerPrefs playerPrefs, string key)
+    public static class PlayerPrefExtensions
     {
-        return PlayerPrefs.GetInt (key) == 1;
-    }
+        public static bool GetBool (this PlayerPrefs playerPrefs, string key)
+        {
+            return PlayerPrefs.GetInt (key) == 1;
+        }
  
-    public static void SetBool (this PlayerPrefs playerPrefs, string key, bool state)
-    {
-        PlayerPrefs.SetInt (key, state ? 1 : 0);
+        public static void SetBool (this PlayerPrefs playerPrefs, string key, bool state)
+        {
+            PlayerPrefs.SetInt (key, state ? 1 : 0);
+        }
     }
 }
