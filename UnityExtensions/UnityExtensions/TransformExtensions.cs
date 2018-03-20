@@ -1,5 +1,8 @@
 ﻿using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
+
 
 namespace UnityExtensions
 {
@@ -33,5 +36,30 @@ namespace UnityExtensions
                 yield return null;
             }
         }
+        
+        public static Vector3 GetCenterPoint(this Vector3 point, params Vector3[] points)
+        {
+            return GetCenterPoint(point, points.ToList());
+        }	
+		
+        public static Vector3 GetCenterPoint(this Vector3 point, List<Vector3> points)
+        {
+            var centerPoint = new Vector3();
+
+            float x = 0, y = 0, z = 0;
+
+            foreach (var p in points)
+            {
+                x += p.x;
+                y += p.y;
+                z += p.z;
+            }
+
+            centerPoint.x = x / 4;
+            centerPoint.y = y / 4;
+            centerPoint.z = z / 4;
+
+            return centerPoint;
+        }	
     }
 }
